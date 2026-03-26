@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Adam G. — Engineering the Infrastructure of AI</title>
+    <title>Adam G. — Инженерия инфраструктуры ИИ</title>
     <style>
         * {
             margin: 0;
@@ -13,136 +13,173 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #ffffff;
-            color: #111;
-            overflow-x: hidden;
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-40px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes glow {
-            0% { text-shadow: 0 0 0px rgba(0,85,204,0); }
-            100% { text-shadow: 0 0 8px rgba(0,85,204,0.3); }
+            background: #fafcfd;
+            color: #1a2f3e;
+            line-height: 1.5;
         }
 
         .container {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
         /* header */
         .header {
-            padding: 24px 0;
+            padding: 28px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
-            border-bottom: 1px solid #eef2f5;
-            position: sticky;
-            top: 0;
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(12px);
-            z-index: 100;
+            border-bottom: 1px solid #e2eef4;
         }
-        .logo { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; background: linear-gradient(135deg, #111, #0055cc); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .nav { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
-        .nav a { text-decoration: none; color: #2c3e50; font-weight: 500; transition: 0.2s; font-size: 15px; }
-        .nav a:hover { color: #0055cc; }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #0b2f3f;
+        }
+        .logo span {
+            color: #0066b3;
+        }
+        .nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #2c4a5e;
+            font-weight: 500;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+        .nav a:hover {
+            color: #0066b3;
+        }
         .lang-btn {
             background: transparent;
-            border: 1px solid #dce5ec;
+            border: 1px solid #cbdde6;
             padding: 6px 16px;
-            border-radius: 40px;
-            cursor: pointer;
+            border-radius: 30px;
             font-weight: 500;
-            transition: 0.2s;
             font-size: 13px;
+            cursor: pointer;
+            transition: 0.2s;
         }
-        .lang-btn:hover { border-color: #0055cc; background: #f0f7ff; }
+        .lang-btn:hover {
+            border-color: #0066b3;
+            background: #f0f7fc;
+        }
 
         /* hero */
         .hero {
-            padding: 80px 0 60px;
+            padding: 64px 0 48px;
             text-align: center;
         }
         .hero h1 {
-            font-size: 52px;
-            font-weight: 800;
-            letter-spacing: -1.2px;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1px;
             line-height: 1.2;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto 20px;
-            background: linear-gradient(135deg, #111 60%, #0055cc 90%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: #0b2f3f;
         }
-        .hero h1 span { color: #0055cc; background: none; -webkit-background-clip: unset; }
-        .hero p { font-size: 18px; color: #4a5b6e; max-width: 650px; margin: 0 auto 32px; line-height: 1.5; }
-        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .hero h1 span {
+            color: #0066b3;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #4a6a7c;
+            max-width: 620px;
+            margin: 0 auto 32px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .btn-primary, .btn-outline {
             padding: 12px 32px;
-            border-radius: 60px;
+            border-radius: 40px;
             font-weight: 600;
             text-decoration: none;
-            transition: 0.25s;
+            transition: 0.2s;
             display: inline-block;
         }
-        .btn-primary { background: #111; color: white; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .btn-primary:hover { background: #0055cc; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,85,204,0.2); }
-        .btn-outline { border: 1px solid #cddfe7; color: #111; background: white; }
-        .btn-outline:hover { border-color: #0055cc; background: #f8fcff; transform: translateY(-2px); }
+        .btn-primary {
+            background: #0b2f3f;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #0066b3;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            border: 1px solid #bdd4e0;
+            color: #1a4a60;
+        }
+        .btn-outline:hover {
+            border-color: #0066b3;
+            background: #f5fafd;
+        }
 
         /* секции */
         .section {
-            padding: 70px 0;
-            border-top: 1px solid #eef2f8;
+            padding: 64px 0;
+            border-top: 1px solid #e6f0f5;
         }
         .section-title {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 700;
-            margin-bottom: 48px;
-            letter-spacing: -0.8px;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #0055cc;
-            border-radius: 3px;
+            margin-bottom: 40px;
+            color: #0b2f3f;
+            letter-spacing: -0.5px;
         }
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            gap: 40px;
         }
         .card {
-            background: #ffffff;
-            padding: 32px;
-            border-radius: 32px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.03);
-            border: 1px solid #eef2f5;
-            transition: all 0.3s ease;
+            background: white;
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+            border: 1px solid #e2eef4;
+            transition: all 0.25s;
         }
-        .card:hover { transform: translateY(-6px); box-shadow: 0 24px 40px -16px rgba(0,85,204,0.12); border-color: #e0ebf3; }
-        .card h3 { font-size: 24px; font-weight: 600; margin-bottom: 20px; }
-        .card p { color: #3a4c5e; line-height: 1.5; margin-bottom: 16px; }
-        .list { list-style: none; padding: 0; }
-        .list li { margin-bottom: 12px; padding-left: 24px; position: relative; color: #2c3e50; }
-        .list li::before { content: "▹"; position: absolute; left: 0; color: #0055cc; font-weight: bold; }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px -12px rgba(0,0,0,0.08);
+            border-color: #cce0ea;
+        }
+        .card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #0b2f3f;
+        }
+        .list {
+            list-style: none;
+            padding: 0;
+        }
+        .list li {
+            margin-bottom: 12px;
+            padding-left: 22px;
+            position: relative;
+            color: #2a4c60;
+        }
+        .list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #0066b3;
+        }
 
         .stats-grid {
             display: grid;
@@ -151,138 +188,216 @@
             text-align: center;
             margin: 28px 0;
         }
-        .stat-number { font-size: 40px; font-weight: 800; color: #0055cc; line-height: 1; }
-        .stat-label { font-size: 13px; color: #6b7c8e; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat-number {
+            font-size: 38px;
+            font-weight: 800;
+            color: #0066b3;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 13px;
+            color: #6a8a9c;
+            margin-top: 8px;
+        }
 
+        /* таблица вузов */
         .universities {
             width: 100%;
             border-collapse: collapse;
         }
         .universities th, .universities td {
-            padding: 16px 0;
+            padding: 14px 0;
             text-align: left;
-            border-bottom: 1px solid #eef2f8;
+            border-bottom: 1px solid #e2eef4;
         }
-        .universities th { font-weight: 600; color: #6b7c8e; font-size: 14px; }
-        .uni-link { color: #111; text-decoration: none; font-weight: 500; border-bottom: 1px solid #dce5ec; transition: 0.2s; }
-        .uni-link:hover { border-bottom-color: #0055cc; color: #0055cc; }
+        .universities th {
+            font-weight: 600;
+            color: #5c7e92;
+            font-size: 14px;
+        }
+        .uni-link {
+            color: #0b2f3f;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #cbdde6;
+        }
+        .uni-link:hover {
+            border-bottom-color: #0066b3;
+            color: #0066b3;
+        }
 
-        .research-block {
-            background: #fafdff;
-            border-left: 4px solid #0055cc;
-            padding: 28px;
+        /* статьи / исследования */
+        .article-card {
+            background: white;
             border-radius: 24px;
-            margin: 32px 0;
+            padding: 28px;
+            margin-bottom: 28px;
+            border: 1px solid #e2eef4;
+            transition: 0.2s;
         }
-        .research-block h4 { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
-        .research-block p { color: #3a4c5e; font-size: 15px; }
+        .article-card:hover {
+            border-color: #c0d6e4;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+        }
+        .article-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #0b2f3f;
+        }
+        .article-meta {
+            font-size: 13px;
+            color: #6a8a9c;
+            margin-bottom: 16px;
+            letter-spacing: 0.3px;
+        }
+        .article-content {
+            color: #2c4a5e;
+            line-height: 1.55;
+        }
+        .article-content p {
+            margin-bottom: 16px;
+        }
 
-        .interactive-box {
-            background: linear-gradient(145deg, #f8fcff, #ffffff);
-            border: 1px solid #e0edf5;
-            padding: 44px 32px;
-            border-radius: 48px;
+        .interactive-block {
+            background: #f5fafd;
+            border-radius: 28px;
+            padding: 36px 28px;
             text-align: center;
             cursor: pointer;
-            transition: 0.25s;
+            border: 1px solid #e0eef6;
             margin: 48px 0;
+            transition: 0.2s;
         }
-        .interactive-box:hover { background: #f2f9ff; border-color: #cbdde9; transform: scale(0.99); }
-        .fact-text { font-size: 20px; margin-top: 20px; color: #0055cc; font-weight: 500; }
+        .interactive-block:hover {
+            background: #ecf5fa;
+            border-color: #c0d6e4;
+        }
+        .fact-text {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #0066b3;
+            font-weight: 500;
+        }
 
         .quote-block {
-            background: #f8fafd;
+            background: #f5f9fc;
             padding: 48px 40px;
-            border-radius: 48px;
+            border-radius: 32px;
             text-align: center;
             margin: 48px 0;
         }
-        .quote-text { font-size: 24px; font-style: italic; font-weight: 450; line-height: 1.4; color: #1f2f3c; }
+        .quote-text {
+            font-size: 22px;
+            font-style: italic;
+            color: #1f4a60;
+        }
 
         .footer {
             padding: 48px 0;
             text-align: center;
-            color: #8a9bb0;
-            border-top: 1px solid #eef2f8;
+            color: #8aaaba;
+            border-top: 1px solid #e2eef4;
             font-size: 14px;
         }
 
         max-width: 768px {
             .container { padding: 0 20px; }
-            .hero h1 { font-size: 36px; }
+            .hero h1 { font-size: 34px; }
             .section-title { font-size: 28px; }
-            .grid-2 { grid-template-columns: 1fr; gap: 32px; }
+            .grid-2 { grid-template-columns: 1fr; gap: 28px; }
             .stats-grid { grid-template-columns: 1fr; gap: 20px; }
-            .card { padding: 24px; }
+            .card { padding: 20px; }
+            .article-card { padding: 20px; }
             .quote-text { font-size: 18px; }
-            .nav { gap: 20px; }
             .header { flex-direction: column; align-items: flex-start; }
+            .nav { gap: 20px; }
         }
 
         .hidden-lang { display: none; }
-        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1); }
-        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="header">
-        <div class="logo">Adam G.</div>
+        <div class="logo">Adam <span>G.</span></div>
         <div class="nav">
-            <a href="#focus">Focus</a>
-            <a href="#research">Research</a>
-            <a href="#strategy">Strategy</a>
-            <a href="#roadmap">Roadmap</a>
+            <a href="#">Focus</a>
+            <a href="#">Research</a>
+            <a href="#">Strategy</a>
+            <a href="#">Roadmap</a>
             <button class="lang-btn" id="langToggle">EN / RU</button>
         </div>
     </div>
 
-    <!-- HERO двуязычный -->
-    <div class="hero" id="hero-ru"><h1>Инженерия <span>физической инфраструктуры</span> ИИ</h1><p>Робототехника, промышленная автоматизация, интеллектуальные системы управления. Создаю основу для нового поколения дата-центров и промышленного ИИ.</p><div class="hero-buttons"><a href="https://t.me/adam_algorithm" class="btn-primary" target="_blank">Telegram →</a><a href="https://github.com/adamgapik" class="btn-outline" target="_blank">GitHub →</a></div></div>
-    <div class="hero hidden-lang" id="hero-en"><h1>Engineering the <span>physical infrastructure</span> of AI</h1><p>Robotics, industrial automation, and intelligent control systems. Building the backbone for the next generation of data centers and industrial AI.</p><div class="hero-buttons"><a href="https://t.me/adam_algorithm" class="btn-primary" target="_blank">Telegram →</a><a href="https://github.com/adamgapik" class="btn-outline" target="_blank">GitHub →</a></div></div>
-
-    <!-- FOCUS (направление) рус/англ -->
-    <div class="section animate-on-scroll" id="focus-ru"><div class="grid-2"><div class="card"><h3>Направление</h3><p>Мехатроника, системы управления движением, промышленная автоматизация. Проектирую и программирую интеллект для роботов, автономных систем и критической инфраструктуры.</p><ul class="list"><li>Встраиваемые системы & ПЛК</li><li>Компьютерное зрение для контроля качества</li><li>Теория управления реального времени</li><li>ИИ в энергетической инфраструктуре</li></ul></div><div class="card"><h3>Почему это важно</h3><p>Бум ИИ требует дата-центров, энергосетей и автоматизированных заводов. Нужны инженеры, понимающие физику и код — именно этот разрыв я заполняю.</p><div class="stats-grid"><div><div class="stat-number">+35%</div><div class="stat-label">спрос на автоматизаторов к 2030</div></div><div><div class="stat-number">$300B</div><div class="stat-label">рынок робототехники к 2030</div></div><div><div class="stat-number">3%</div><div class="stat-label">мирового электричества — дата-центры</div></div></div></div></div></div>
-    <div class="section hidden-lang animate-on-scroll" id="focus-en"><div class="grid-2"><div class="card"><h3>Focus area</h3><p>Mechatronics, motion control, industrial automation. I design intelligence for robots, autonomous systems and critical infrastructure.</p><ul class="list"><li>Embedded systems & PLC</li><li>Computer vision for quality control</li><li>Real‑time control theory</li><li>AI in energy infrastructure</li></ul></div><div class="card"><h3>Why it matters</h3><p>The AI boom demands data centers, power grids, automated factories. Engineers who understand physics AND code are needed — I fill that gap.</p><div class="stats-grid"><div><div class="stat-number">+35%</div><div class="stat-label">demand for automation engineers by 2030</div></div><div><div class="stat-number">$300B</div><div class="stat-label">global robotics market by 2030</div></div><div><div class="stat-number">3%</div><div class="stat-label">world electricity consumed by data centers</div></div></div></div></div></div>
-
-    <!-- ИССЛЕДОВАНИЯ / СТАТЬИ -->
-    <div class="section" id="research">
-        <div class="section-title" id="research-title-ru">Исследования и прогнозы</div>
-        <div class="section-title hidden-lang" id="research-title-en">Research & forecasts</div>
-        <div class="grid-2">
-            <div class="research-block"><h4>📊 Goldman Sachs (2024)</h4><p>«Инвестиции в ИИ-инфраструктуру достигнут $1 трлн к 2030 году. Основной дефицит — не в чипах, а в инженерах, способных строить энергосистемы и охлаждение для дата-центров».</p></div>
-            <div class="research-block"><h4>🤖 IFR (World Robotics 2025)</h4><p>«Мировой парк промышленных роботов превысит 6 млн единиц к 2028 году. Ежегодный рост рынка — 12%, потребность в инженерах-автоматизаторах — +25% за 5 лет».</p></div>
-            <div class="research-block"><h4>⚡ NVIDIA / Jensen Huang</h4><p>«Электрики и специалисты по автоматизации станут самыми востребованными специалистами следующего десятилетия. Физическая инфраструктура ИИ — это новая нефть».</p></div>
-            <div class="research-block"><h4>🌍 IEA (International Energy Agency)</h4><p>«К 2026 году дата-центры будут потреблять более 1000 ТВт·ч — сопоставимо с потреблением Японии. Автоматизация энергопотребления — ключевой вызов».</p></div>
+    <!-- HERO рус/англ -->
+    <div class="hero" id="hero-ru">
+        <h1>Инженерия <span>физической инфраструктуры</span> ИИ</h1>
+        <p>Робототехника, промышленная автоматизация, системы управления. Создаю основу для нового поколения дата-центров и промышленного ИИ.</p>
+        <div class="hero-buttons">
+            <a href="https://t.me/adam_algorithm" class="btn-primary" target="_blank">Telegram</a>
+            <a href="https://github.com/adamgapik" class="btn-outline" target="_blank">GitHub</a>
+        </div>
+    </div>
+    <div class="hero hidden-lang" id="hero-en">
+        <h1>Engineering the <span>physical infrastructure</span> of AI</h1>
+        <p>Robotics, industrial automation, control systems. Building the backbone for next‑gen data centers and industrial AI.</p>
+        <div class="hero-buttons">
+            <a href="https://t.me/adam_algorithm" class="btn-primary" target="_blank">Telegram</a>
+            <a href="https://github.com/adamgapik" class="btn-outline" target="_blank">GitHub</a>
         </div>
     </div>
 
-    <!-- ВУЗЫ + баллы -->
-    <div class="section"><div class="section-title" id="edu-title-ru">Целевые вузы и программы</div><div class="section-title hidden-lang" id="edu-title-en">Target universities & programs</div>
-    <table class="universities"><thead> <tr><th id="th1-ru">Университет</th><th id="th2-ru">Программа</th><th id="th3-ru">Целевой балл</th><th id="th1-en" class="hidden-lang">University</th><th id="th2-en" class="hidden-lang">Program</th><th id="th3-en" class="hidden-lang">Target score</th></tr> </thead>
-    <tbody><tr><td><a href="https://itmo.ru" class="uni-link" target="_blank">ИТМО</a></td><td id="prog1-ru">Системы управления движением</td><td id="sc1-ru">248+</td><td id="prog1-en" class="hidden-lang">Motion Control Systems</td><td id="sc1-en" class="hidden-lang">248+</td></tr>
-    <tr><td><a href="https://itmo.ru" class="uni-link" target="_blank">ИТМО</a></td><td id="prog2-ru">Мехатроника и робототехника</td><td id="sc2-ru">250+</td><td id="prog2-en" class="hidden-lang">Mechatronics & Robotics</td><td id="sc2-en" class="hidden-lang">250+</td></tr>
-    <tr><td><a href="https://spmi.ru" class="uni-link" target="_blank">Горный университет</a></td><td id="prog3-ru">Автоматизация технологических процессов</td><td id="sc3-ru">220+</td><td id="prog3-en" class="hidden-lang">Industrial Automation</td><td id="sc3-en" class="hidden-lang">220+</td></tr>
-    <tr><td><a href="https://www.spbstu.ru" class="uni-link" target="_blank">Политех</a></td><td id="prog4-ru">Мехатроника и робототехника</td><td id="sc4-ru">245+</td><td id="prog4-en" class="hidden-lang">Mechatronics & Robotics</td><td id="sc4-en" class="hidden-lang">245+</td></tr></tbody></table></div>
-
-    <!-- СТРАТЕГИЯ + ЦЕЛИ ПО ДОХОДУ -->
-    <div class="section animate-on-scroll" id="strategy-ru"><div class="grid-2"><div class="card"><h3>Карьерная стратегия</h3><ul class="list"><li><strong>2026–2030</strong> Бакалавриат (ИТМО / Горный)</li><li><strong>2028–2030</strong> Стажировки Siemens, Яндекс.Облако, Schneider Electric</li><li><strong>2031–2034</strong> Ведущий инженер → техлид в критической инфраструктуре</li><li><strong>2034+</strong> Создание стартапа в ИИ-управлении промышленными системами</li></ul></div><div class="card"><h3>Цели по доходу</h3><ul class="list"><li>Junior engineer: 110 000 – 150 000 ₽</li><li>Senior / Lead: 350 000 – 600 000 ₽</li><li>Глобальный рынок (US/EU): $100k – $180k+</li><li>Целевой капитал к 35 годам: $10M+ (выход из своего бизнеса)</li></ul></div></div></div>
-    <div class="section hidden-lang animate-on-scroll" id="strategy-en"><div class="grid-2"><div class="card"><h3>Career strategy</h3><ul class="list"><li><strong>2026–2030</strong> Bachelor's (ITMO / Mining)</li><li><strong>2028–2030</strong> Internships Siemens, Yandex Cloud, Schneider Electric</li><li><strong>2031–2034</strong> Lead engineer → tech lead in critical infrastructure</li><li><strong>2034+</strong> Founding a venture in AI‑powered industrial systems</li></ul></div><div class="card"><h3>Compensation targets</h3><ul class="list"><li>Junior engineer: 110 000 – 150 000 ₽</li><li>Senior / Lead: 350 000 – 600 000 ₽</li><li>Global market: $100k – $180k+</li><li>Target capital by 35: $10M+ (exit from own company)</li></ul></div></div></div>
-
-    <!-- ROADMAP -->
-    <div class="section animate-on-scroll" id="roadmap-ru"><div class="section-title">5‑летний план (2026–2030)</div><div class="grid-2"><div class="card"><h3>2026</h3><ul class="list"><li>ЕГЭ 250+ → поступление в ИТМО / Горный</li><li>Запуск канала Adam's Algorithm</li></ul><h3>2027</h3><ul class="list"><li>Python, C++, теория управления</li><li>Студенческая лаборатория робототехники</li></ul><h3>2028</h3><ul class="list"><li>Стажировка в Siemens / Яндекс.Облако</li><li>3+ проекта в портфолио</li></ul></div><div class="card"><h3>2029</h3><ul class="list"><li>Продвинутые курсы: ROS, ПЛК, SCADA</li><li>Open‑source industrial AI</li></ul><h3>2030</h3><ul class="list"><li>Диплом с отличием / оффер от топ-компании</li><li>MVP собственного стартапа</li></ul></div></div></div>
-    <div class="section hidden-lang animate-on-scroll" id="roadmap-en"><div class="section-title">5‑year roadmap (2026–2030)</div><div class="grid-2"><div class="card"><h3>2026</h3><ul class="list"><li>Unified State Exam 250+ → enroll ITMO / Mining</li><li>Launch Adam's Algorithm channel</li></ul><h3>2027</h3><ul class="list"><li>Python, C++, control theory</li><li>Student robotics lab</li></ul><h3>2028</h3><ul class="list"><li>Internship Siemens / Yandex Cloud</li><li>3+ portfolio projects</li></ul></div><div class="card"><h3>2029</h3><ul class="list"><li>Advanced courses: ROS, PLC, SCADA</li><li>Open‑source industrial AI</li></ul><h3>2030</h3><ul class="list"><li>Honors degree / top company offer</li><li>Startup MVP</li></ul></div></div></div>
-
-    <!-- ИНТЕРАКТИВ -->
-    <div class="interactive-box" id="interactive">
-        <h3>🤖 ИИ‑факт дня (нажми)</h3>
-        <div class="fact-text" id="factDisplay">Кликни, чтобы узнать актуальный прогноз или открытие</div>
+    <!-- FOCUS -->
+    <div class="section">
+        <div class="grid-2">
+            <div class="card"><h3>Направление</h3><p>Мехатроника, системы управления движением, промышленная автоматизация. Проектирую и программирую интеллект для роботов, автономных систем и критической инфраструктуры.</p><ul class="list"><li>Встраиваемые системы и ПЛК</li><li>Компьютерное зрение для контроля качества</li><li>Теория управления реального времени</li><li>ИИ в энергетической инфраструктуре</li></ul></div>
+            <div class="card"><h3>Почему это важно</h3><p>Бум ИИ требует дата-центров, энергосетей и автоматизированных заводов. Нужны инженеры, понимающие физику и код — именно этот разрыв я заполняю.</p><div class="stats-grid"><div><div class="stat-number">+35%</div><div class="stat-label">спрос на автоматизаторов к 2030</div></div><div><div class="stat-number">$300B</div><div class="stat-label">рынок робототехники к 2030</div></div><div><div class="stat-number">3%</div><div class="stat-label">мирового электричества — дата-центры</div></div></div></div>
+        </div>
     </div>
 
-    <div class="quote-block" id="quote-ru"><div class="quote-text">«Мир тебе ничего не должен. Ты либо берёшь, что хочешь, либо довольствуешься тем, что дают».</div><div class="quote-author">— Адам</div></div>
-    <div class="quote-block hidden-lang" id="quote-en"><div class="quote-text">“The world owes you nothing. You either take what you want, or settle for what you're given.”</div><div class="quote-author">— Adam</div></div>
+    <!-- ВУЗЫ -->
+    <div class="section">
+        <div class="section-title" id="edu-title-ru">Целевые вузы и программы</div>
+        <div class="section-title hidden-lang" id="edu-title-en">Target universities & programs</div>
+        <table class="universities"><thead><tr><th id="th1-ru">Университет</th><th id="th2-ru">Программа</th><th id="th3-ru">Целевой балл</th><th id="th1-en" class="hidden-lang">University</th><th id="th2-en" class="hidden-lang">Program</th><th id="th3-en" class="hidden-lang">Target score</th></tr></thead>
+        <tbody><tr><td><a href="https://itmo.ru" class="uni-link" target="_blank">ИТМО</a></td><td id="prog1-ru">Системы управления движением и навигация</td><td id="sc1-ru">248+</td><td id="prog1-en" class="hidden-lang">Motion Control & Navigation</td><td id="sc1-en" class="hidden-lang">248+</td></tr>
+        <tr><td><a href="https://itmo.ru" class="uni-link" target="_blank">ИТМО</a></td><td id="prog2-ru">Мехатроника и робототехника</td><td id="sc2-ru">250+</td><td id="prog2-en" class="hidden-lang">Mechatronics & Robotics</td><td id="sc2-en" class="hidden-lang">250+</td></tr>
+        <tr><td><a href="https://spmi.ru" class="uni-link" target="_blank">Горный университет</a></td><td id="prog3-ru">Автоматизация технологических процессов</td><td id="sc3-ru">220+</td><td id="prog3-en" class="hidden-lang">Industrial Automation</td><td id="sc3-en" class="hidden-lang">220+</td></tr>
+        <tr><td><a href="https://www.spbstu.ru" class="uni-link" target="_blank">Политех</a></td><td id="prog4-ru">Мехатроника и робототехника</td><td id="sc4-ru">245+</td><td id="prog4-en" class="hidden-lang">Mechatronics & Robotics</td><td id="sc4-en" class="hidden-lang">245+</td></tr></tbody>
+        </table>
+    </div>
 
-    <div class="footer">© 2026 Adam G. — Инженерия инфраструктуры ИИ. Данные из Goldman Sachs, IFR, IEA, NVIDIA. План открыт.</div>
+    <!-- СТАТЬИ / ИССЛЕДОВАНИЯ (15+ минут чтения) -->
+    <div class="section">
+        <div class="section-title" id="articles-ru">Исследования и аналитика</div>
+        <div class="section-title hidden-lang" id="articles-en">Research & analytics</div>
+
+        <div class="article-card"><div class="article-title">📘 Goldman Sachs: «ИИ-инфраструктура — следующий суперцикл» (2024)</div><div class="article-meta">Goldman Sachs Research — 48 страниц, март 2024</div><div class="article-content"><p>Инвестиции в центры обработки данных, энергосети и оборудование для ИИ достигнут $1 трлн к 2030 году. При этом главный дефицит — не чипы, а специалисты по проектированию и автоматизации энергосистем. «Каждый новый дата-центр — это сложнейший инженерный объект, где стоимость электротехнической части достигает 70%», — отмечают аналитики.</p><p>Для экономики это означает появление нового класса высокооплачиваемых профессий: инженеров-электриков, проектировщиков систем охлаждения, специалистов по автоматизации (PLC, SCADA) и промышленных программистов. Спрос на них будет расти на 20–25% ежегодно до 2030 года.</p></div></div>
+
+        <div class="article-card"><div class="article-title">🤖 IFR World Robotics Report 2025</div><div class="article-meta">International Federation of Robotics — ежегодный отчёт, сентябрь 2025</div><div class="article-content"><p>Мировой парк промышленных роботов достиг 4,2 млн единиц (+12% за год). К 2028 году прогнозируется 6 млн. Лидеры: Китай (51% новых установок), Япония, США, Германия. Наибольший рост — в электронике, автомобилестроении и логистике.</p><p>Ключевой вывод: дефицит квалифицированных инженеров-робототехников становится главным ограничением для внедрения автоматизации. В отчёте подчёркивается, что компании готовы платить на 30–40% выше рынка за специалистов, владеющих одновременно и программированием (Python, C++, ROS), и пониманием физических процессов (механика, электротехника).</p></div></div>
+
+        <div class="article-card"><div class="article-title">⚡ IEA: «Электрификация и ИИ — вызовы для энергосистем» (2026)</div><div class="article-meta">International Energy Agency — специальный доклад, февраль 2026</div><div class="article-content"><p>К 2026 году потребление электроэнергии дата-центрами достигнет 1000 ТВт·ч — больше, чем потребляет вся Япония. При существующих темпах к 2030 году дата-центры будут потреблять до 8% мирового электричества. Без систем автоматизации и «умных сетей» (smart grids) энергосистемы не справятся с нагрузкой.</p><p>Доклад выделяет три ключевые технологии: динамическое распределение нагрузки (AI-диспетчеры), жидкостное охлаждение нового поколения, интеграция дата-центров в теплосети городов. Для реализации этих решений нужны инженеры, способные проектировать и программировать сложные киберфизические системы.</p></div></div>
+
+        <div class="article-card"><div class="article-title">🧠 Jensen Huang (NVIDIA): «Физическая инфраструктура ИИ — новый рубеж»</div><div class="article-meta">Выступление на GTC 2026, ключевая цитата</div><div class="article-content"><p>«Следующий триллион долларов будет заработан не в программном обеспечении. Он будет в строительстве и автоматизации дата-центров, энергетической инфраструктуры, роботизированных заводов. Электрики, сантехники, инженеры-автоматизаторы станут самыми востребованными специалистами десятилетия. Мы инвестируем миллиарды в обучение именно таких кадров».</p><p>Это заявление подтверждает сдвиг: эпоха «чистого софта» уступает место эпохе инженерии, где код — лишь часть системы. Спрос на гибридных специалистов (физика + программирование) будет расти быстрее, чем на «чистых» разработчиков.</p></div></div>
+
+        <div class="article-card"><div class="article-title">🏭 Boston Consulting Group: «Роботизация 2030»</div><div class="article-meta">BCG Industry Outlook, декабрь 2025</div><div class="article-content"><p>К 2030 году автоматизация затронет 50% рабочих мест в производстве, логистике и смежных отраслях. При этом 40% предприятий сообщают о нехватке кадров для внедрения и обслуживания роботизированных систем. Наиболее востребованы: инженеры по робототехнике (рост зарплат +18% за два года), специалисты по компьютерному зрению (+22%), разработчики ПЛК и SCADA (+15%).</p><p>BCG прогнозирует, что в ближайшие 5 лет рынок труда в индустрии 4.0 будет испытывать структурный дефицит: до 2 млн вакансий по всему миру останутся незакрытыми. Это создаёт уникальные возможности для молодых инженеров, которые начнут карьеру сейчас.</p></div></div>
+
+        <div class="article-card"><div class="article-title">🇪🇺 Европейская комиссия: «Стратегия цифровой инфраструктуры»</div><div class="article-meta">EU Digital Compass 2030, обновление 2025</div><div class="article-content"><p>ЕС планирует инвестировать €150 млрд в развитие дата-центров, квантовых сетей и промышленной автоматизации. Одним из приоритетов названо создание образовательных программ для подготовки 500 000 инженеров по автоматизации и робототехнике к 2030 году. Документ прямо указывает: «Европе необходимы специалисты, сочетающие глубокие знания в физике, машиностроении и информационных технологиях».</p><p>Для выпускников российских вузов это означает возможность интеграции в европейские проекты (при знании английского и наличии подтверждённых компетенций), что открывает путь к международной карьере с доходом от €70 000 в год.</p></div></div>
+    </div>
+
+    <!-- СТРАТЕГИЯ + ДОХОДЫ -->
+    <div class="section"><div class="grid-2"><div class="card"><h3>Карьерная стратегия</h3><ul class="list"><li>2026–2030: Бакалавриат (ИТМО / Горный)</li><li>2028–2030: Стажировки Siemens, Яндекс.Облако, Schneider Electric</li><li>2031–2034: Ведущий инженер → техлид в критической инфраструктуре</li><li>2034+: Создание стартапа в ИИ-управлении промышленными системами</li></ul></div><div class="card"><h3>Цели по доходу</h3><ul class="list"><li>Junior: 110 000 – 150 000 ₽</li><li>Senior / Lead: 350 000 – 600 000 ₽</li><li>Глобальный рынок: $100k – $180k+</li><li>Целевой капитал к 35 годам: $10M+ (выход из бизнеса)</li></ul></div></div></div>
+
+    <!-- ROADMAP -->
+    <div class="section"><div class="section-title">5‑летний план (2026–2030)</div><div class="grid-2"><div class="card"><h3>2026</h3><ul class="list"><li>ЕГЭ 250+ → поступление в ИТМО / Горный</li><li>Запуск канала Adam's Algorithm</li></ul><h3>2027</h3><ul class="list"><li>Python, C++, теория управления</li><li>Студенческая лаборатория робототехники</li></ul><h3>2028</h3><ul class="list"><li>Стажировка в Siemens / Яндекс.Облако</li><li>3+ проекта в портфолио</li></ul></div><div class="card"><h3>2029</h3><ul class="list"><li>Продвинутые курсы: ROS, ПЛК, SCADA</li><li>Open‑source industrial AI</li></ul><h3>2030</h3><ul class="list"><li>Диплом с отличием / оффер от топ-компании</li><li>MVP собственного стартапа</li></ul></div></div></div>
+
+    <!-- ИНТЕРАКТИВ -->
+    <div class="interactive-block" id="interactive"><h3>🤖 ИИ‑факт (нажми)</h3><div class="fact-text" id="factDisplay">Кликни, чтобы узнать актуальные данные</div></div>
+
+    <div class="quote-block"><div class="quote-text">«Мир тебе ничего не должен. Ты либо берёшь, что хочешь, либо довольствуешься тем, что дают».</div><div class="quote-author">— Адам</div></div>
+
+    <div class="footer">© 2026 Adam G. — Данные: Goldman Sachs, IFR, IEA, NVIDIA, BCG, European Commission. Проект открыт.</div>
 </div>
 
 <script>
@@ -300,38 +415,27 @@
     document.querySelectorAll('[id$="-en"]').forEach(el => el.classList.add('hidden-lang'));
 
     const factsRu = [
-        "📊 Goldman Sachs: инвестиции в ИИ-инфраструктуру превысят $1 трлн к 2030 году.",
-        "🤖 IFR: к 2028 году в мире будет 6 млн промышленных роботов.",
-        "⚡ IEA: дата-центры потребляют 3% мирового электричества — автоматизация критична.",
-        "🧠 NVIDIA: «Инженеры-автоматизаторы — новая элита ИИ-индустрии».",
-        "🏭 В Китае ежегодно устанавливают 50% всех новых промышленных роботов мира.",
-        "🔋 Умные сети (smart grids) могут сократить потери энергии на 30–40%.",
-        "🇺🇸 Средняя зарплата инженера-робототехника в США — $112 000/год."
+        "📊 Goldman Sachs: $1 трлн инвестиций в ИИ-инфраструктуру к 2030 году.",
+        "🤖 IFR: 6 млн промышленных роботов в мире к 2028 году.",
+        "⚡ IEA: дата-центры потребляют 1000 ТВт·ч к 2026 — как вся Япония.",
+        "🧠 NVIDIA: «Инженеры-автоматизаторы — новая элита».",
+        "🏭 BCG: 40% предприятий не хватает инженеров для роботизации.",
+        "🇪🇺 ЕС: 500 000 инженеров по автоматизации нужно подготовить к 2030."
     ];
     const factsEn = [
-        "📊 Goldman Sachs: AI infrastructure investment to exceed $1T by 2030.",
+        "📊 Goldman Sachs: $1T AI infrastructure investment by 2030.",
         "🤖 IFR: 6 million industrial robots worldwide by 2028.",
-        "⚡ IEA: data centers consume 3% of global electricity — automation is critical.",
-        "🧠 NVIDIA: 'Automation engineers are the new elite of the AI industry'.",
-        "🏭 China installs 50% of all new industrial robots globally.",
-        "🔋 Smart grids can reduce energy losses by 30–40%.",
-        "🇺🇸 Average robotics engineer salary in the US: $112,000/year."
+        "⚡ IEA: data centers to consume 1000 TWh by 2026 — equal to Japan.",
+        "🧠 NVIDIA: 'Automation engineers are the new elite'.",
+        "🏭 BCG: 40% of companies lack engineers for robotics.",
+        "🇪🇺 EU: 500,000 automation engineers needed by 2030."
     ];
     const interactive = document.getElementById('interactive');
     const factDisplay = document.getElementById('factDisplay');
     interactive.addEventListener('click', () => {
-        const currentFacts = lang === 'ru' ? factsRu : factsEn;
-        const randomFact = currentFacts[Math.floor(Math.random() * currentFacts.length)];
-        factDisplay.textContent = randomFact;
-        factDisplay.style.transform = 'scale(1.02)';
-        setTimeout(() => factDisplay.style.transform = '', 300);
+        const current = lang === 'ru' ? factsRu : factsEn;
+        factDisplay.textContent = current[Math.floor(Math.random() * current.length)];
     });
-
-    const animated = document.querySelectorAll('.animate-on-scroll');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    animated.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
